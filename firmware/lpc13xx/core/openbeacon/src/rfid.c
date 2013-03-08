@@ -305,6 +305,14 @@ rfid_init (void)
 
 	/* wait for PN532 to boot */
 	pmu_wait_ms (100);
+	
+	/* wake up the PN532C106, added by dragonbbc */
+	GPIOSetValue (PN532_CS_PORT, PN532_CS_PIN, 0);
+	
+	/* go to normal mode, added by dragonbbc */
+	data[0] = PN532_CMD_SAMConfiguration;
+	data[1] = 0x01;															/* Normal Mode */
+	rfid_execute (&data, 2, sizeof (data));
 }
 
 #endif /*ENABLE_PN532_RFID */

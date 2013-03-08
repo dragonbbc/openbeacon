@@ -1,6 +1,6 @@
 TARGET=openpcd2-libnfc
 ARCH=LPC13
-CPU=$(ARCH)42
+CPU=$(ARCH)43
 DEBUG=-g
 OPTIM=-O2 -mword-relocations
 
