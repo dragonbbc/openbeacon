@@ -24,6 +24,7 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
+//#define DEBUG
 #ifdef  DEBUG
 #define debug(args...) debug_printf(args)
 #else /* no DEBUG enable - remove debug code */

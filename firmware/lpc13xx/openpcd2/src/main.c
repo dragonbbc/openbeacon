@@ -240,6 +240,8 @@ main (void)
 	/* CDC USB Initialization */
 	init_usbserial ();
 
+	while (GPIOGetValue (0, 1));
+
 	/* Init RFID */
 	rfid_init ();
 
